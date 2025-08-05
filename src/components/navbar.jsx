@@ -8,8 +8,10 @@ export const Navbar = () => {
     return (
         <Nav>
             <div>
+                <a href="/">
                 <Img src="/images/favicon.png" alt="logo" />
                 <h1>Zap Agenda</h1>
+                </a>
             </div>
             <Hamburguer onClick={() => setOpen(!open)}>
                 <span />
@@ -40,12 +42,15 @@ const Nav = styled.nav`
     padding: 1rem;
     background: #cccccc;
 
-    div {
-        display: flex; 
+  
+        a {
+          display: flex; 
         align-items: center;
         gap: 10px;
         color: #515050ff;
-     }
+        text-decoration: none;
+        }
+
 `;
 
 const Hamburguer = styled.div`
