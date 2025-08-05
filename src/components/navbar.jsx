@@ -7,25 +7,29 @@ export const Navbar = () => {
 
     return (
         <Nav>
-              <Img src="/images/logo-zapAgenda.png.png" alt="logo" />
-          
+            <div>
+                <Img src="/images/favicon.png" alt="logo" />
+                <h1>Zap Agenda</h1>
+            </div>
+            <Hamburguer onClick={() => setOpen(!open)}>
+                <span />
+                <span />
+                <span />
+            </Hamburguer>
+
             <NavLinks open={open}>
                 <li><Link to="/">Login</Link></li>
                 <li><Link to="/agenda">Agenda</Link></li>
                 <li><Link to="/cadastro">Cadastro</Link></li>
                 <li><Link to="/calendario">Calendário</Link></li>
             </NavLinks>
-              <Hamburger onClick={() => setOpen(!open)}>
-                <span />
-                <span />
-                <span />
-            </Hamburger>
+            
         </Nav>
     );
 };
 
 const Img = styled.img`
-    width: 50px;
+    width: 100px;
     height: auto;
     `
 
@@ -35,9 +39,16 @@ const Nav = styled.nav`
     align-items: center;
     padding: 1rem;
     background: #cccccc;
+
+    div {
+        display: flex; 
+        align-items: center;
+        gap: 10px;
+        color: #515050ff;
+     }
 `;
 
-const Hamburger = styled.div`
+const Hamburguer = styled.div`
     width: 30px;
     height: 25px;
     display: flex;
